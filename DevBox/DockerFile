@@ -1,0 +1,7 @@
+FROM centos:7
+RUN yum install -y httpd
+RUN yum install -y php php-mysql php-gd
+EXPOSE 80
+EXPOSE 443
+ENTRYPOINT [ "apachectl" ]
+CMD [ "-DFOREGROUND" ]
